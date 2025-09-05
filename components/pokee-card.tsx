@@ -54,7 +54,7 @@ export default function PokeeCard({ pokemon, className }: { pokemon: Pokemon, cl
                         <BadgeTextOutline
                             className={`px-2 py-1 rounded-full text-xs font-semibold text-neutral-100`}
                             bgcolour={`bg-color-${item.type.name}`}
-                            text={`#${String(pokemon.id).padStart(3, '0')}`}
+                            text={item.type.name}
                             tag="section"
                             textOutlinerProps={{
                                 className: "text-xs font-semibold",
