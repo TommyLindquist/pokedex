@@ -5,8 +5,8 @@ import RandomButton from "@/components/random-button";
 import Search from "@/components/search";
 import { getRandomNames } from "@/lib/util";
 import { Suspense } from "react";
-import Image from "next/image";
 import DrawLogo from "@/components/draw-logo";
+import Footer from "@/components/draw-footer";
 
 export default async function Home({
   searchParams,
@@ -67,26 +67,7 @@ export default async function Home({
           <PokemonGrid names={names} />
         </Suspense>
       </section>
-      <footer className="bg-gray-900 text-white py-10 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
-          <div className="flex items-center gap-3">
-            <DrawLogo text="Pokédex" src="/Logo.png" textColor="text-white" />
-          </div>
-
-          <p className="text-gray-300 text-lg">Explore the world of Pokémon</p>
-          {/* Social Icons */}
-          <div className="flex gap-6 mt-4">
-            <section style={{fontFamily: 'var(--iconsSocialMedia15Colr)', fontSize: '3.125rem'}}>
-            <a className={"mr-4"}>
-              f
-            </a>
-            <a>
-              i
-            </a>
-            </section>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

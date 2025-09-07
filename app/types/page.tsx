@@ -1,9 +1,9 @@
 import NavMain from "@/components/nav-main";
 import ListTypes from "@/components/list-types";
 import { Suspense } from "react";
-import Image from "next/image";
 import PokeeCardsByTypeWrapper from "@/components/pokee-cards-by-type-wrapper";
 import DrawLogo from "@/components/draw-logo";
+import Footer from "@/components/draw-footer";
 
 export default async function Types({
     searchParams,
@@ -43,24 +43,7 @@ export default async function Types({
                     <PokeeCardsByTypeWrapper type={pokeesByType as string} />
                 </Suspense>
             </section>
-            <footer className="bg-gray-900 text-white py-10 px-6">
-                <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
-                    <div className="flex items-center gap-3">
-                        <DrawLogo text="Pokédex" src="/Logo.png" textColor="text-white" />
-                    </div>
-
-                    <p className="text-gray-300 text-lg">Explore the world of Pokémon</p>
-                    {/* Social Icons */}
-                    <div className="flex gap-6 mt-4">
-                        <a>
-                            <Image src="/Facebook.svg" alt="Facebook logo" width={100} height={100} className={`w-full h-full object-cover`} />
-                        </a>
-                        <a>
-                            <Image src="/Instagram.svg" alt="Instagram logo" width={100} height={100} className={`w-full h-full object-cover`} />
-                        </a>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </main>
     );
 }
