@@ -2,8 +2,8 @@ import NavMain from "@/components/nav-main";
 import ListTypes from "@/components/list-types";
 import { Suspense } from "react";
 import Image from "next/image";
-import Logo from "@/components/Logo";
 import PokeeCardsByTypeWrapper from "@/components/pokee-cards-by-type-wrapper";
+import DrawLogo from "@/components/draw-logo";
 
 export default async function Types({
     searchParams,
@@ -19,7 +19,7 @@ export default async function Types({
                 <div className="absolute bottom-[-1] left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500" />
 
                 <div className="flex w-full max-w-6xl items-center justify-between">
-                    <Logo text="Pokédex" src="/Logo.png" />
+                    <DrawLogo text="Pokédex" src="/Logo.png" />
                     <NavMain />
                 </div>
             </header>
@@ -46,7 +46,7 @@ export default async function Types({
             <footer className="bg-gray-900 text-white py-10 px-6">
                 <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
                     <div className="flex items-center gap-3">
-                        <Logo text="Pokédex" src="/Logo.png" textColor="text-white" />
+                        <DrawLogo text="Pokédex" src="/Logo.png" textColor="text-white" />
                     </div>
 
                     <p className="text-gray-300 text-lg">Explore the world of Pokémon</p>

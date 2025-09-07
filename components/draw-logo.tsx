@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Logo({ text, src, className = "", textColor = "" }: { text: string, src: string, className?: string, textColor?: string }) {
+export default function DrawLogo({ text, src, className = "", textColor = "" }: { text: string, src: string, className?: string, textColor?: string }) {
     return (
         <div className={`flex items-center gap-3 ml-6 ${className}`}>
             <div className="w-10 h-10 rounded-full flex items-center justify-center">

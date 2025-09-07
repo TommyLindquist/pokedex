@@ -15,12 +15,17 @@ const jersey = Jersey_10({
   variable: "--font-jersey"
 });
 
-const fatternColor = localFont({
-  src: "./fonts/FatternColor.ttf",
-  variable: "--font-fattern-color",
-  display: "swap",
+const bouncybluepersonalregularColr = localFont({
+	src: "./fonts/BouncyBluePERSONALRegular-COLR.ttf",
+	variable: "--bouncybluepersonalregularColr",
+	display: "swap",
 });
 
+const iconsSocialMedia15Colr = localFont({
+	src: "./fonts/Icons Social Media 15-COLR.ttf",
+	variable: "--iconsSocialMedia15Colr",
+	display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Pokédex",
@@ -35,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jaldi.variable} ${jersey.variable} ${fatternColor.variable} antialiased`}
+        className={`${jaldi.variable} ${jersey.variable} ${bouncybluepersonalregularColr.variable} ${iconsSocialMedia15Colr.variable} antialiased`}
       >
         <header className="content-grid">
         </header>

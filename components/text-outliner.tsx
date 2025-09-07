@@ -28,9 +28,9 @@ export default function TextOutliner({
 
   const arialabel = typeof text === "string" || typeof text === "number" ? { "aria-label": String(text) } : null;
   return (
-    <div className={"relative inline-block"}>
+    <section className={"relative inline-block"}>
       {offsets.map((offset, i) => (
-        <span
+        <div
           key={i}
           aria-hidden="true"
           role="presentation" /* Reinforces purely visual and should be ignored by screen readers ... */
@@ -38,13 +38,13 @@ export default function TextOutliner({
           style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}
         >
           {text}
-        </span>
+        </div>
       ))}
       <Tag className={`relative ${textcolour} ${className}`}
         {...(arialabel || {})}
       >
         {text}
       </Tag>
-    </div>
+    </section>
   )
 }

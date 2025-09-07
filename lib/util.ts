@@ -1,12 +1,12 @@
-export const error = (message: string) => {
-  throw new Error(String(message));
-}
-
 import { fetchSamplePokemonsGetNameId } from "@/lib/data/fetch-pokemon-name-id"
 import { TPokeeDataOrError } from "./types";
 import { searchPokee } from "./data/data-service";
 import { fetchPokemonByNames } from "./data/fetch-pokemons-by-names";
 import { PokeeSearch, Pokemon } from "./interfaces";
+
+export const error = (message: string) => {
+  throw new Error(String(message));
+}
 
 export async function getRandomNames(nrOfNames: number)
   : Promise<string[]> {

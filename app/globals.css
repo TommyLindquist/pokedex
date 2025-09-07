@@ -236,7 +236,3 @@ h1, h2, h3 {
 .border-fairy {
   @apply border-pink-300;
 }
-
-.colorfont{
-  font-family: var(--font-fattern), sans-serif;
-}
